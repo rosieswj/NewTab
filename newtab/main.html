@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>              
+    <link href='css/bootstrap.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600|Open+Sans:300,400,600" rel="stylesheet">
+
+    <link href='css/rotating-card.css' rel='stylesheet' />
+     <link href='css/search.css' rel='stylesheet' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+    <!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> -->
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1 class="title">
+            Chrome NewTab
+        </h1>
+    </div>
+    <div class="row" >
+        <div class=“col-sm-4”></div>
+        <div id="searchBar" class=“col-sm-4”>
+                <form target="_blank" action="https://www.google.com/search">
+                  <input type="text" name="q" size="31" value="" placeholder="Search on google">
+                </form>
+        </div>
+        <div class=“col-sm-4”></div>
+    </div>
+    <div class="row r-carousel">
+        <div class="col-md-4 col-sm-6"></div>
+        <div class="col-md-4 col-sm-6">
+            <div class="slick-container"> 
+                <div class="card-container manual-flip">
+                    <div class="card">
+                        <div class="front">
+                            <div class="question">
+                                <h3>Who should see posts you're tagged in on your timeline?</h3>
+                                <p class="description">Timeline is your Facebook history with key life points, including birthdays, weddings and other major events.</p>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <div class="choice">
+                                        <label class="btn ">
+                                            <input type="radio" name="optradio">
+                                            <span class="radio-dot"></span>
+                                            <span class="radio-w">Everyone on Facebook</span>
+                                        </label>
+                                    </div>
+                                    <div class="choice">
+                                        <label class="btn">
+                                            <input type="radio" name="optradio">
+                                            <span class="radio-dot"></span>
+                                            <span class="radio-w">My friends</span>
+                                        </label>
+                                    </div>
+                                    <div class="choice">
+                                        <label class="btn">
+                                            <input type="radio" name="optradio">
+                                            <span class="radio-dot"></span>
+                                            <span class="radio-w">Only me</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple btn-submit" onclick="rotateCard(this)">
+                                        <i class="fa fa-check"></i> Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- end front panel -->
+
+
+                        <div class="back">
+                            <div class="question">
+                                <h3>Who should see posts you're tagged in on your timeline?</h3>
+                            </div>
+                            <div class="content">
+                                <div class="my-choice"> 
+                                    <h5>You've selected: <span id="my-ans">Public</span></h5>
+                                </div>
+                                <div class="c-choice"> 
+                                    <h5><span id="percent"></span>% of people prefer to set it to: <br><span id="crowd-ans">My friends</span></h5>
+                                </div>
+                                <div class="settings"> 
+                                    <div id="to-fb"><a href="http://www.facebook.com" target="_blank">Change my setting to what the crowd thinks</a></div>
+                                    <div id="to-next"><a href="#" target="_blank">I'd like to keep my settings. <br>Take me to the next question</a></div>
+                                    <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                    <i class="fa fa-reply"></i> Back
+                                </button>
+                                </div>
+                            </div>
+                            
+                        </div> <!-- end back panel -->
+                    </div> <!-- end card -->
+                </div> <!-- end card-container -->
+
+                <div class="card-container manual-flip">
+                    <div class="card">
+                        <div class="front">
+                            <div class="question">
+                                <h3>Who can see your friend list?</h3>
+                                <p class="description">Timeline is your Facebook history with key life points, including birthdays, weddings and other major events.</p>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <div class="choice">
+                                        <label class="btn ">
+                                            <input type="radio" name="optradio">
+                                            <span class="radio-dot"></span>
+                                            <span class="radio-w">Everyone on Facebook</span>
+                                        </label>
+                                    </div>
+                                    <div class="choice">
+                                        <label class="btn">
+                                            <input type="radio" name="optradio">
+                                            <span class="radio-dot"></span>
+                                            <span class="radio-w">My friends</span>
+                                        </label>
+                                    </div>
+                                    <div class="choice">
+                                        <label class="btn">
+                                            <input type="radio" name="optradio">
+                                            <span class="radio-dot"></span>
+                                            <span class="radio-w">Only me</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple btn-submit" onclick="rotateCard(this)">
+                                        <i class="fa fa-check"></i> Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- end front panel -->
+
+
+                        <div class="back">
+                            <div class="question">
+                                <h3>Who can see your friend list?</h3>
+                            </div>
+                            <div class="content">
+                                <div class="my-choice"> 
+                                    <h5>You've selected: <span id="my-ans">Public</span></h5>
+                                </div>
+                                <div class="c-choice"> 
+                                    <h5><span id="percent"></span>% of people prefer to set it to: <br><span id="crowd-ans">My friends</span></h5>
+                                </div>
+                                <div class="settings"> 
+                                    <div id="to-fb"><a href="http://www.facebook.com" target="_blank">Change my setting to what the crowd thinks</a></div>
+                                    <div id="to-next"><a href="#" target="_blank">I'd like to keep my settings. <br>Take me to the next question</a></div>
+                                    <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                    <i class="fa fa-reply"></i> Back
+                                </button>
+                                </div>
+                            </div>
+                            
+                        </div> <!-- end back panel -->
+                    </div> <!-- end card -->
+                </div> <!-- end card-container -->
+
+                <div class="card-container manual-flip">
+                    <div class="card">
+                        <div class="front">
+                            <div class="question">
+                                <h3>Who can send your friend request?</h3>
+                                <p class="description">Timeline is your Facebook history with key life points, including birthdays, weddings and other major events.</p>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <div class="choice">
+                                        <label class="btn ">
+                                            <input type="radio" name="optradio">
+                                            <span class="radio-dot"></span>
+                                            <span class="radio-w">Everyone on Facebook</span>
+                                        </label>
+                                    </div>
+                                    <div class="choice">
+                                        <label class="btn">
+                                            <input type="radio" name="optradio">
+                                            <span class="radio-dot"></span>
+                                            <span class="radio-w">My friends</span>
+                                        </label>
+                                    </div>
+                                    <div class="choice">
+                                        <label class="btn">
+                                            <input type="radio" name="optradio">
+                                            <span class="radio-dot"></span>
+                                            <span class="radio-w">Only me</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple btn-submit" onclick="rotateCard(this)">
+                                        <i class="fa fa-check"></i> Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- end front panel -->
+
+
+                        <div class="back">
+                            <div class="question">
+                                <h3>Who can send your friend request?</h3>
+                            </div>
+                            <div class="content">
+                                <div class="my-choice"> 
+                                    <h5>You've selected: <span id="my-ans">Public</span></h5>
+                                </div>
+                                <div class="c-choice"> 
+                                    <h5><span id="percent"></span>% of people prefer to set it to: <br><span id="crowd-ans">My friends</span></h5>
+                                </div>
+                                <div class="settings"> 
+                                    <div id="to-fb"><a href="http://www.facebook.com" target="_blank">Change my setting to what the crowd thinks</a></div>
+                                    <div id="to-next"><a href="#" target="_blank">I'd like to keep my settings. <br>Take me to the next question</a></div>
+                                    <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                    <i class="fa fa-reply"></i> Back
+                                </button>
+                                </div>
+                            </div>
+                            
+                        </div> <!-- end back panel -->
+                    </div> <!-- end card -->
+                </div> <!-- end card-container -->
+
+
+
+         </div>
+
+        </div> <!-- end col sm 4 -->
+        <div class="col-md-4 col-sm-4"> </div> <!-- end col-sm-4 -->
+
+    </div> <!-- end row -->
+
+    <div class="row r-options">
+            <button class="btn btn-simple btn-option" onclick="">
+                <i class="fa fa-filter"></i> Filter
+            </button>
+             <button class="btn btn-simple btn-option" onclick="">
+                <i class="fa fa-random"></i> Shuffle
+            </button>
+    </div>
+
+
+</div>
+
+
+<script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.slick-container').slick();
+    //   $('.slick-container').slick({
+    //         dots: true,
+    //         infinite: true,
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1
+    //       });
+    });
+
+</script>
+
+<script type="text/javascript">
+    $().ready(function(){
+        $('[rel="tooltip"]').tooltip();
+
+    });
+
+    function rotateCard(btn){
+        var $card = $(btn).closest('.card-container');
+        console.log($card);
+        if($card.hasClass('hover')){
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+    }
+
+    $(document).ready(function() {
+        $('input[type="radio"]').click(function() {
+            $this = $(this);
+            $label = $this.parent();
+            // first make ALL labels normal
+            $label.parent().parent().find('label').css('color', 'white');
+            // then color just THIS one
+            $label.css('color', '#fdffba');
+        });
+    });
+</script>
+
+<!-- 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46172202-4', 'auto');
+  ga('send', 'pageview');
+</script> -->
+
+</body>
+</html>

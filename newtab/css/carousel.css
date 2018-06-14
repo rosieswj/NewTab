@@ -1,0 +1,13 @@
+
+.slick-prev::before {
+  /* fa-arrow-circle-left */
+  font-family: FontAwesome;
+  font-size:30px;
+  content: "\f0a8";
+}
+.slick-next::before {
+  /* fa-arrow-circle-right */
+  font-family: FontAwesome;
+  font-size:30px;
+  content: "\f0a9";
+}

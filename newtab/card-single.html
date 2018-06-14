@@ -1,0 +1,63 @@
+<div class="card-container manual-flip">
+    <div class="card">
+        <div class="front">
+            <div class="question">
+                <h3>Who should see posts you're tagged in on your timeline?</h3>
+                <p class="description">Timeline is your Facebook history with key life points, including birthdays, weddings and other major events.</p>
+            </div>
+            <div class="content">
+                <div class="main">
+                    <div class="choice">
+                        <label class="btn ">
+                            <input type="radio" name="optradio">
+                            <span class="radio-dot"></span>
+                            <span class="radio-w">Everyone on Facebook</span>
+                        </label>
+                    </div>
+                    <div class="choice">
+                        <label class="btn">
+                            <input type="radio" name="optradio">
+                            <span class="radio-dot"></span>
+                            <span class="radio-w">My friends</span>
+                        </label>
+                    </div>
+                    <div class="choice">
+                        <label class="btn">
+                            <input type="radio" name="optradio">
+                            <span class="radio-dot"></span>
+                            <span class="radio-w">Only me</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="footer">
+                    <button class="btn btn-simple btn-submit" onclick="rotateCard(this)">
+                        <i class="fa fa-check"></i> Submit
+                    </button>
+                </div>
+            </div>
+        </div> <!-- end front panel -->
+
+
+        <div class="back">
+            <div class="question">
+                <h3>Who should see posts you're tagged in on your timeline?</h3>
+            </div>
+            <div class="content">
+                <div class="my-choice"> 
+                    <h5>You've selected: <span id="my-ans">Public</span></h5>
+                </div>
+                <div class="c-choice"> 
+                    <h5><span id="percent"></span>% of people prefer to set it to: <br><span id="crowd-ans">My friends</span></h5>
+                </div>
+                <div class="settings"> 
+                    <div id="to-fb"><a href="http://www.facebook.com" target="_blank">Change my setting to what the crowd thinks</a></div>
+                    <div id="to-next"><a href="#" target="_blank">I'd like to keep my settings. <br>Take me to the next question</a></div>
+                    <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                    <i class="fa fa-reply"></i> Back
+                </button>
+                </div>
+            </div>
+            
+        </div> <!-- end back panel -->
+    </div> <!-- end card -->
+</div> <!-- end card-container -->
