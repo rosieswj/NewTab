@@ -7,7 +7,7 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600|Open+Sans:300,400,600" rel="stylesheet">
 
-    <link href='css/rotating-card.css' rel='stylesheet' />
+    <link href='css/index.css' rel='stylesheet' />
      <link href='css/search.css' rel='stylesheet' />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -235,12 +235,23 @@
     </div> <!-- end row -->
 
     <div class="row r-options">
-            <button class="btn btn-simple btn-option" onclick="">
-                <i class="fa fa-filter"></i> Filter
+        
+        <div class="btn-group dropup" id="filter-btn">
+            <button type="button" class="btn btn-default btn-option dropdown-toggle" data-toggle="dropdown">
+                Filter
             </button>
-             <button class="btn btn-simple btn-option" onclick="">
-                <i class="fa fa-random"></i> Shuffle
-            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Friends</a></li>
+                <li><a href="#">Timeline and Tags</a></li>
+                <li><a href="#">Posts</a></li>
+                 <li><a href="#">Ads</a></li>
+            </ul>
+        </div>
+            
+        <button class="btn btn-simple btn-option" onclick="">
+            <i class="fa fa-random"></i> Shuffle
+        </button>
     </div>
 
 
